@@ -14,7 +14,7 @@ Upload Model
         task=Task.IMAGE_CLASSIFICATION,
         framework=Framework.TENSORFLOW_KERAS,
         file_path="YOUR_MODEL_PATH", # ex) ./model.h5
-        input_shape="YOUR_MODEL_INPUT_SHAPE",  # ex) [{"batch": 1, "channel": 3, "dimension": [32, 32]}]
+        input_shapes="YOUR_MODEL_INPUT_SHAPES",  # ex) [{"batch": 1, "channel": 3, "dimension": [32, 32]}]
     )
 
 Get Model
