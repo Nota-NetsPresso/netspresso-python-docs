@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model Compressor &mdash; NetsPresso Python Package 0.1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/netspresso_logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Enum Class" href="enum.html" />
+    <link rel="prev" title="API Description" href="../description.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            NetsPresso Python Package
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../description.html">API Description</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Model Compressor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor"><code class="docutils literal notranslate"><span class="pre">ModelCompressor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.__init__"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.get_credit"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.get_credit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.upload_model"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.upload_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.get_models"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.get_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.get_uploaded_models"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.get_uploaded_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.get_compressed_models"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.get_compressed_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.get_model"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.get_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.download_model"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.download_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.delete_model"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.delete_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.select_compression_method"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.select_compression_method()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.get_compression"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.get_compression()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.compress_model"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.compress_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.recommendation_compression"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.recommendation_compression()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netspresso.compressor.__init__.ModelCompressor.automatic_compression"><code class="docutils literal notranslate"><span class="pre">ModelCompressor.automatic_compression()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="enum.html">Enum Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validator.html">Compression Params Validator</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NetsPresso Python Package</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../description.html">API Description</a></li>
+      <li class="breadcrumb-item active">Model Compressor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/description/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="model-compressor">
+<h1>Model Compressor<a class="headerlink" href="#model-compressor" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ModelCompressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize the Model Compressor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<em>str</em>) – The email address for a user account.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – The password for a user account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_credit">
+<span class="sig-name descname"><span class="pre">get_credit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.get_credit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_credit" title="Permalink to this definition"></a></dt>
+<dd><p>Get the available NetsPresso credits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> – If an error occurs while getting credit information.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total amount of available NetsPresso credits.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.upload_model">
+<span class="sig-name descname"><span class="pre">upload_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Framework</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shapes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Model</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.upload_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.upload_model" title="Permalink to this definition"></a></dt>
+<dd><p>Upload a model for compression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – The name of the model.</p></li>
+<li><p><strong>task</strong> (<em>Task</em>) – The task of the model.</p></li>
+<li><p><strong>framework</strong> (<em>Framework</em>) – The framework of the model.</p></li>
+<li><p><strong>file_path</strong> (<em>str</em>) – The file path where the model is located.</p></li>
+<li><p><strong>input_shapes</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Input shapes of the model. Defaults to [].</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Currently, only single input models are supported.</p></li>
+<li><p>If the model’s <cite>input_shapes</cite> are <strong>dynamic</strong>, it must be provided as a required input.</p></li>
+<li><p>If the model’s <cite>input_shapes</cite> are <strong>static</strong>, it must be set to the same shape as the model’s input tensor.</p></li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> – If an error occurs while uploading the model.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Uploaded model object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_models">
+<span class="sig-name descname"><span class="pre">get_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.get_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_models" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of uploaded &amp; compressed models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> – If an error occurs while getting the model list.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of uploaded &amp; compressed models.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Dict[str, Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_uploaded_models">
+<span class="sig-name descname"><span class="pre">get_uploaded_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.get_uploaded_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_uploaded_models" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of uploaded models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> – If an error occurs while getting the uploaded model list.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of uploaded models.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Dict[str, Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_compressed_models">
+<span class="sig-name descname"><span class="pre">get_compressed_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.get_compressed_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_compressed_models" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of compressed models for a given model ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while getting the compressed model list.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of compressed models for a given model ID.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Dict[str, Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_model">
+<span class="sig-name descname"><span class="pre">get_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">CompressedModel</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.get_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_model" title="Permalink to this definition"></a></dt>
+<dd><p>Get the model for a given model ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while getting the model.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The retrieved model. If the model is compressed,
+<cite>CompressedModel</cite> will be returned. Otherwise, <cite>Model</cite> will be returned.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Union[Model, CompressedModel]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.download_model">
+<span class="sig-name descname"><span class="pre">download_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.download_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.download_model" title="Permalink to this definition"></a></dt>
+<dd><p>Download the model for a given model ID to the local path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p></li>
+<li><p><strong>local_path</strong> (<em>str</em>) – The local path to save the downloaded model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while downloading the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.delete_model">
+<span class="sig-name descname"><span class="pre">delete_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.delete_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.delete_model" title="Permalink to this definition"></a></dt>
+<dd><p>Delete the model for a given model ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p></li>
+<li><p><strong>recursive</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to also delete the compressed model for that model. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while deleting the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.select_compression_method">
+<span class="sig-name descname"><span class="pre">select_compression_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CompressionMethod</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CompressionBase</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.select_compression_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.select_compression_method" title="Permalink to this definition"></a></dt>
+<dd><p>Select a compression method for a model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p></li>
+<li><p><strong>compression_method</strong> (<em>CompressionMethod</em>) – The selected compression method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while selecting the compression method.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The compression information for the selected compression method.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>CompressionBase</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_compression">
+<span class="sig-name descname"><span class="pre">get_compression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compression_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CompressionInfo</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.get_compression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_compression" title="Permalink to this definition"></a></dt>
+<dd><p>Get information about a compression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>compression_id</strong> (<em>str</em>) – The ID of the compression.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while getting the compression information.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The information about the compression.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>CompressionInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.compress_model">
+<span class="sig-name descname"><span class="pre">compress_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CompressionInfo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CompressedModel</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.compress_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.compress_model" title="Permalink to this definition"></a></dt>
+<dd><p>Compress a model using the provided compression information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compression</strong> (<em>CompressionInfo</em>) – The information about the compression.</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – The name of the compressed model.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – The local path to save the compressed model.</p></li>
+<li><p><strong>dataset_path</strong> (<em>str</em><em>, </em><em>optional</em>) – The path of the dataset used for nuclear norm compression method. Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while compressing the model.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The compressed model.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>CompressedModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.recommendation_compression">
+<span class="sig-name descname"><span class="pre">recommendation_compression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CompressionMethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommendation_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RecommendationMethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommendation_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CompressedModel</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.recommendation_compression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.recommendation_compression" title="Permalink to this definition"></a></dt>
+<dd><p>Compress a recommendation-based model using the given compression and recommendation methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – The name of the compressed model.</p></li>
+<li><p><strong>compression_method</strong> (<em>CompressionMethod</em>) – The selected compression method.</p></li>
+<li><p><strong>recommendation_method</strong> (<em>RecommendationMethod</em>) – The selected recommendation method.</p></li>
+<li><p><strong>recommendation_ratio</strong> (<em>float</em>) – The compression ratio recommended by the recommendation method.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – The local path to save the compressed model.</p></li>
+<li><p><strong>dataset_path</strong> (<em>str</em><em>, </em><em>optional</em>) – The path of the dataset used for nuclear norm compression method. Default is None.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>recommendation_method</dt><dd><ul>
+<li><dl class="simple">
+<dt>If you selected PR_L2, PR_GM, PR_NN for compression_method</dt><dd><ul>
+<li><p>The recommended_method available is <strong>SLAMP</strong>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If you selected FD_TK, FD_SVD for compression_method</dt><dd><ul>
+<li><p>The recommended_method available is <strong>VBMF</strong>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>recommendation_ratio:</dt><dd><ul>
+<li><p>SLAMP: 0 &lt; ratio &lt;= 1</p></li>
+<li><p>VBMF: -1 &lt;= ratio &lt;= 1</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> – If an error occurs while performing recommendation compression.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The compressed model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>CompressedModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.automatic_compression">
+<span class="sig-name descname"><span class="pre">automatic_compression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CompressedModel</span></span></span><a class="reference internal" href="../_modules/netspresso/compressor/__init__.html#ModelCompressor.automatic_compression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.automatic_compression" title="Permalink to this definition"></a></dt>
+<dd><p>Compress a model automatically based on the given compression ratio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – The name of the compressed model.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – The local path to save the compressed model.</p></li>
+<li><p><strong>compression_ratio</strong> (<em>float</em>) – The compression ratio for automatic compression. Defaults to 0.5.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>compression_ratio: 0 &lt; ratio &lt;= 1</p></li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> – If an error occurs while performing automatic compression.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The compressed model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>CompressedModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../description.html" class="btn btn-neutral float-left" title="API Description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum.html" class="btn btn-neutral float-right" title="Enum Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Nota AI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
