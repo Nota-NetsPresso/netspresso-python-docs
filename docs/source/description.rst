@@ -2,8 +2,6 @@ API Description
 ===============
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    description/api
-   description/enum
-   description/validator   

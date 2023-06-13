@@ -1,10 +1,10 @@
 Installation
 ============
 
-
-There are two ways you can install the NetsPresso Python package: using pip or manually through our project GitHub repository.
+There are two ways you can install the NetsPresso Python Package: using pip or manually through our project GitHub repository.
 
 To install this package, please use ``Python 3.8`` or higher.
+
 
 From PyPI (Recommended)
 -----------------------
@@ -19,5 +19,5 @@ From Github
 
 .. code-block:: bash
 
-    git clone https://github.com/nota-github/netspresso-python.git
+    git clone https://github.com/Nota-NetsPresso/netspresso-python.git
     pip install -e .
