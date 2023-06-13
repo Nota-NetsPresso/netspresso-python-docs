@@ -31,7 +31,7 @@
 Welcome to NetsPresso Python package!
 =====================================
 
-Learn how to install and use the Roboflow Python package.
+Learn how to install and use the NetsPresso Python package.
 
 .. note::
 
