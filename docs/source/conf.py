@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.abspath(".."))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "NetsPresso Python Package"
+project = "NetsPresso Python package"
 copyright = "2023, Nota AI"
 author = "Nota AI"
 release = "0.1.0"

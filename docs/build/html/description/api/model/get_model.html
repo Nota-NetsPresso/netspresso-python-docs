@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Model &mdash; NetsPresso Python package 0.1.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/netspresso_logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Download Model" href="download_model.html" />
+    <link rel="prev" title="Upload Model" href="upload_model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            NetsPresso Python package
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../description.html">API Description</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../api.html">Model Compressor</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../api.html#model">Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="upload_model.html">Upload Model</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Get Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="download_model.html">Download Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="delete_model.html">Delete Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="get_uploaded_models.html">Get Uploaded Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="get_compressed_models.html">Get Compressed Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="get_models.html">Get Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api.html#compression">Compression</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">NetsPresso Python package</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../description.html">API Description</a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">Model Compressor</a></li>
+      <li class="breadcrumb-item active">Get Model</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/description/api/model/get_model.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="get-model">
+<h1>Get Model<a class="headerlink" href="#get-model" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="netspresso.compressor.__init__.ModelCompressor.get_model">
+<span class="sig-name descname"><span class="pre">get_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">CompressedModel</span></span></span><a class="headerlink" href="#netspresso.compressor.__init__.ModelCompressor.get_model" title="Permalink to this definition"></a></dt>
+<dd><p>Get the model for a given model ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>model_id</strong> (<em>str</em>) – The ID of the model.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>e</strong> – If an error occurs while getting the model.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The retrieved model. If the model is compressed,
+<cite>CompressedModel</cite> will be returned. Otherwise, <cite>Model</cite> will be returned.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Union[Model, CompressedModel]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<section id="details-of-returns">
+<h2>Details of Returns<a class="headerlink" href="#details-of-returns" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shapes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">InputShape</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flops</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainable_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_trainable_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/netspresso/compressor/core/model.html#Model"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Represents a uploaded model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">model_id</span></span></dt>
+<dd><p>The ID of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">model_name</span></span></dt>
+<dd><p>The name of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">task</span></span></dt>
+<dd><p>The task of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Task</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">framework</span></span></dt>
+<dd><p>The framework of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Framework</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">input_shapes</span></span></dt>
+<dd><p>The input shapes of the model.</p>
+<dl class="simple">
+<dt>InputShape Attributes:</dt><dd><ul class="simple">
+<li><p>batch (int): The batch size of the input tensor.</p></li>
+<li><p>channel (int): The number of channels in the input tensor.</p></li>
+<li><p>dimension (List[int]): The dimensions of the input tensor.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[InputShape]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">model_size</span></span></dt>
+<dd><p>The size of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">flops</span></span></dt>
+<dd><p>The FLOPs (floating point operations) of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">trainable_parameters</span></span></dt>
+<dd><p>The number of trainable parameters in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">non_trainable_parameters</span></span></dt>
+<dd><p>The number of non-trainable parameters in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">number_of_layers</span></span></dt>
+<dd><p>The number of layers in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompressedModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shapes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">InputShape</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flops</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainable_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_trainable_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/netspresso/compressor/core/model.html#CompressedModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Represents a compressed model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">compression_id</span></span></dt>
+<dd><p>The ID of the compression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">original_model_id</span></span></dt>
+<dd><p>The ID of the uploaded model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<section id="if-the-model-is-uploaded-model">
+<h3>If the model is uploaded model<a class="headerlink" href="#if-the-model-is-uploaded-model" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">netspresso.compressor</span> <span class="kn">import</span> <span class="n">ModelCompressor</span>
+
+
+<span class="n">compressor</span> <span class="o">=</span> <span class="n">ModelCompressor</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;YOUR_EMAIL&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">compressor</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="s2">&quot;YOUR_UPLOADED_MODEL_ID&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="output">
+<h4>Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>model
+Model<span class="o">(</span>
+<span class="w">    </span><span class="nv">model_id</span><span class="o">=</span><span class="s2">&quot;YOUR_MODEL_ID&quot;</span>,
+<span class="w">    </span><span class="nv">model_name</span><span class="o">=</span><span class="s2">&quot;YOUR_MODEL_NAME&quot;</span>,
+<span class="w">    </span><span class="nv">task</span><span class="o">=</span><span class="s2">&quot;image_classification&quot;</span>,
+<span class="w">    </span><span class="nv">framework</span><span class="o">=</span><span class="s2">&quot;tensorflow_keras&quot;</span>,
+<span class="w">    </span><span class="nv">input_shapes</span><span class="o">=[</span>InputShape<span class="o">(</span><span class="nv">batch</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">channel</span><span class="o">=</span><span class="m">3</span>,<span class="w"> </span><span class="nv">dimension</span><span class="o">=[</span><span class="m">32</span>,<span class="w"> </span><span class="m">32</span><span class="o">])]</span>,
+<span class="w">    </span><span class="nv">model_size</span><span class="o">=</span><span class="m">12</span>.9641,
+<span class="w">    </span><span class="nv">flops</span><span class="o">=</span><span class="m">92</span>.8979,
+<span class="w">    </span><span class="nv">trainable_parameters</span><span class="o">=</span><span class="m">3</span>.3095,
+<span class="w">    </span><span class="nv">non_trainable_parameters</span><span class="o">=</span><span class="m">0</span>.0219,
+<span class="w">    </span><span class="nv">number_of_layers</span><span class="o">=</span><span class="m">0</span>,
+<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="if-the-model-is-compressed-model">
+<h3>If the model is compressed model<a class="headerlink" href="#if-the-model-is-compressed-model" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">netspresso.compressor</span> <span class="kn">import</span> <span class="n">ModelCompressor</span>
+
+
+<span class="n">compressor</span> <span class="o">=</span> <span class="n">ModelCompressor</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;YOUR_EMAIL&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">compressor</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="s2">&quot;YOUR_COMPRESSED_MODEL_ID&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id1">
+<h4>Output<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>model
+CompressedModel<span class="o">(</span>
+<span class="w">    </span><span class="nv">model_id</span><span class="o">=</span><span class="s2">&quot;YOUR_MODEL_ID&quot;</span>,
+<span class="w">    </span><span class="nv">model_name</span><span class="o">=</span><span class="s2">&quot;YOUR_COMPRESSED_MODEL_NAME&quot;</span>,
+<span class="w">    </span><span class="nv">task</span><span class="o">=</span><span class="s2">&quot;image_classification&quot;</span>,
+<span class="w">    </span><span class="nv">framework</span><span class="o">=</span><span class="s2">&quot;tensorflow_keras&quot;</span>,
+<span class="w">    </span><span class="nv">input_shapes</span><span class="o">=[</span>InputShape<span class="o">(</span><span class="nv">batch</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">channel</span><span class="o">=</span><span class="m">3</span>,<span class="w"> </span><span class="nv">dimension</span><span class="o">=[</span><span class="m">32</span>,<span class="w"> </span><span class="m">32</span><span class="o">])]</span>,
+<span class="w">    </span><span class="nv">model_size</span><span class="o">=</span><span class="m">2</span>.9439,
+<span class="w">    </span><span class="nv">flops</span><span class="o">=</span><span class="m">24</span>.1811,
+<span class="w">    </span><span class="nv">trainable_parameters</span><span class="o">=</span><span class="m">0</span>.6933,
+<span class="w">    </span><span class="nv">non_trainable_parameters</span><span class="o">=</span><span class="m">0</span>.01,
+<span class="w">    </span><span class="nv">number_of_layers</span><span class="o">=</span><span class="m">0</span>,
+<span class="w">    </span><span class="nv">compression_id</span><span class="o">=</span><span class="s2">&quot;ce584e7f-b76e-43cc-83fe-d140fe476a58&quot;</span>,
+<span class="w">    </span><span class="nv">original_model_id</span><span class="o">=</span><span class="s2">&quot;f482a0d3-0321-49a4-a8d2-bd88ac124230&quot;</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="upload_model.html" class="btn btn-neutral float-left" title="Upload Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="download_model.html" class="btn btn-neutral float-right" title="Download Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Nota AI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
