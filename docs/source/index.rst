@@ -45,3 +45,13 @@ Learn how to install and use the NetsPresso Python package.
 
    installation
    description
+
+
+
+Contact
+~~~~~~~
+Join our `Discussion Forum`_ for providing feedback or sharing your use cases, and if you want to talk more with Nota, please contact us here.
+Or you can also do it via email(`contact@nota.ai`_) or phone(+82 2-555-8659)!
+
+.. _Discussion Forum : https://github.com/orgs/Nota-NetsPresso/discussions
+.. _contact@nota.ai : contact@nota.ai

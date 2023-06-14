@@ -180,6 +180,7 @@
 <li><dl>
 <dt>L2 Norm Pruning</dt><dd><ul class="simple">
 <li><p>L2-Norm is used to represent the importance of the corresponding filter. In other words, this method prunes filters based on the magnitude of weights.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-structured-pruning#supported-functions">L2 Norm Pruning</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/pruning_l2.png"><img alt="../../../_images/pruning_l2.png" class="align-center" src="../../../_images/pruning_l2.png" style="width: 500px;" /></a>
 </dd>
@@ -188,6 +189,7 @@
 <li><dl>
 <dt>GM Pruning</dt><dd><ul class="simple">
 <li><p>Geometric Median is used to measure the redundancy of the corresponding filter and remove redundant filters.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-structured-pruning#supported-functions">GM Pruning</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/pruning_gm.png"><img alt="../../../_images/pruning_gm.png" class="align-center" src="../../../_images/pruning_gm.png" style="width: 500px;" /></a>
 </dd>
@@ -196,6 +198,7 @@
 <li><dl>
 <dt>Nuclear Norm Pruning</dt><dd><ul class="simple">
 <li><p>The Nuclear Norm is the sum of the singular values representing the energy. It computes the nuclear norm on the feature map to determine the filter’s relevance. For this reason, a portion of the dataset is needed.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-structured-pruning#supported-functions">Nuclear Norm Pruning</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/pruning_nn.png"><img alt="../../../_images/pruning_nn.png" class="align-center" src="../../../_images/pruning_nn.png" style="width: 500px;" /></a>
 </dd>
@@ -210,6 +213,7 @@
 <li><p>This function prunes the chosen filters of each layer through the index without certain criteria.</p></li>
 <li><p>You can apply your own criteria to prune the model.</p></li>
 <li><p>If the selected filters are redundant or less important, it will return a better performing model.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-structured-pruning#supported-functions">Pruning By Index</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/pruning_by_index.png"><img alt="../../../_images/pruning_by_index.png" class="align-center" src="../../../_images/pruning_by_index.png" style="width: 400px;" /></a>
 </dd>
@@ -221,14 +225,9 @@
 <dt>Tucker Decomposition</dt><dd><ul class="simple">
 <li><p>Approximating the original filters by Tucker decomposition method.</p></li>
 <li><p>This method decomposes the convolution with a 4D kernel tensor into two factor matrices and one small core tensor.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-filter-decomposition#supported-method">Tucker Decomposition</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/tucker_decomposition.png"><img alt="../../../_images/tucker_decomposition.png" class="align-center" src="../../../_images/tucker_decomposition.png" style="width: 500px;" /></a>
-<ul class="simple">
-<li><p>In Channel: The number of input channels in each layer.</p></li>
-<li><p>Out Channel: The number of output channels in each layer.</p></li>
-<li><p>In Rank: The number of input channel of core tensor that represent relation level of low-rank factor matrix.</p></li>
-<li><p>Out Rank: The number of output channel of core tensor that represent relation level of low-rank factor matrix.</p></li>
-</ul>
 </dd>
 </dl>
 </li>
@@ -236,13 +235,9 @@
 <dt>Singular Value Decomposition</dt><dd><ul class="simple">
 <li><p>Approximating the original filters by Singular value decomposition method.</p></li>
 <li><p>This method decomposes the pointwise convolution or fully-connected layer into two pointwise or fully-connected layers.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-filter-decomposition#supported-method">Singular Value Decomposition</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/singular_value_decomposition.png"><img alt="../../../_images/singular_value_decomposition.png" class="align-center" src="../../../_images/singular_value_decomposition.png" style="width: 500px;" /></a>
-<ul class="simple">
-<li><p>In Channel: The number of input channels in each layer.</p></li>
-<li><p>Out Channel: The number of output channels of the target layer.</p></li>
-<li><p>Rank: The condition number of weight matrix W.</p></li>
-</ul>
 </dd>
 </dl>
 </li>
@@ -250,13 +245,9 @@
 <dt>CP Decomposition</dt><dd><ul class="simple">
 <li><p>Approximating the original filters by CP decomposition method.</p></li>
 <li><p>This method approximates the convolution with a 4D kernel tensor by the sequence of four convolutions with small 2D kernel tensors.</p></li>
+<li><p>Click the link for more information. (<a class="reference external" href="https://docs.netspresso.ai/docs/mc-filter-decomposition#supported-method">CP Decomposition</a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/cp_decomposition.png"><img alt="../../../_images/cp_decomposition.png" class="align-center" src="../../../_images/cp_decomposition.png" style="width: 500px;" /></a>
-<ul class="simple">
-<li><p>In Channel: The number of input channels in each layer.</p></li>
-<li><p>Out Channel: The number of output channels in each layer.</p></li>
-<li><p>Rank: A sum of N-way outer products of rank-one tensor for estimating original convolution filter.</p></li>
-</ul>
 </dd>
 </dl>
 </li>
@@ -386,6 +377,10 @@ CompressionInfo<span class="o">(</span>
 </section>
 <section id="set-compression-params">
 <h2>Set Compression Params<a class="headerlink" href="#set-compression-params" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3>Details of Parameters<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="values-of-available-layer">
+<h4>Values of available layer<a class="headerlink" href="#values-of-available-layer" title="Permalink to this heading"></a></h4>
 <table class="table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Compression Method</p></th>
@@ -436,6 +431,9 @@ Num of Out Channels)</p></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="id3">
+<h4>Example<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">netspresso.compressor</span> <span class="kn">import</span> <span class="n">ModelCompressor</span>
 
 
@@ -443,6 +441,8 @@ Num of Out Channels)</p></td>
    <span class="n">available_layer</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">]</span>
 </pre></div>
 </div>
+<section id="id4">
+<h5>Output<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h5>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>compression_info
 CompressionInfo<span class="o">(</span>
 <span class="w">   </span><span class="nv">compression_method</span><span class="o">=</span><span class="s2">&quot;PR_L2&quot;</span>,
@@ -468,6 +468,9 @@ CompressionInfo<span class="o">(</span>
 <span class="o">)</span>
 </pre></div>
 </div>
+</section>
+</section>
+</section>
 </section>
 <section id="compress-model">
 <h2>Compress Model<a class="headerlink" href="#compress-model" title="Permalink to this heading"></a></h2>
@@ -496,8 +499,8 @@ CompressionInfo<span class="o">(</span>
 </dl>
 </dd></dl>
 
-<section id="id2">
-<h3>Details of Returns<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="id5">
+<h3>Details of Returns<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompressedModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shapes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">InputShape</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flops</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainable_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_trainable_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_model_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/netspresso/compressor/core/model.html#CompressedModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -526,8 +529,8 @@ CompressionInfo<span class="o">(</span>
 
 </dd></dl>
 
-<section id="id3">
-<h4>Example<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<section id="id6">
+<h4>Example<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">netspresso.compressor</span> <span class="kn">import</span> <span class="n">ModelCompressor</span>
 
 
@@ -539,8 +542,8 @@ CompressionInfo<span class="o">(</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-<section id="id4">
-<h5>Output<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h5>
+<section id="id7">
+<h5>Output<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h5>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>compress_model
 CompressedModel<span class="o">(</span>
 <span class="w">    </span><span class="nv">model_id</span><span class="o">=</span><span class="s2">&quot;78f65510-1f99-4856-99d9-60902373bd1d&quot;</span>,
