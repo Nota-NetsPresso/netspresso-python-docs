@@ -10,12 +10,12 @@ Welcome to NetsPresso Python package!
 
    <div align="center">
       <p>
-         <a align="center" href="https://py.netspresso.ai/" target="_blank">
+         <a align="center" href="https://py.netspresso.ai/?utm_source=py_docs&utm_medium=banner_py&utm_campaign=py_launch/" target="_blank">
          <img width="100%" src="_static/pynp_main.png"></a>
       </p>
 
       <p align="center">
-         <a href="https://py.netspresso.ai/" target="_blank">PyNetsPresso</a> |
+         <a href="https://py.netspresso.ai/?utm_source=py_docs&utm_medium=text_py&utm_campaign=py_launch/" target="_blank">PyNetsPresso</a> |
          <a href="https://github.com/Nota-NetsPresso/netspresso-python/" target="_blank">NetsPresso Python package</a> |
          <a href="https://github.com/Nota-NetsPresso/NetsPresso-Compatible-Models/" target="_blank">NetsPresso Compatible Models</a>
       </p>
